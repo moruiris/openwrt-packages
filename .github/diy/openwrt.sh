@@ -5,9 +5,6 @@ rm -rf $1
 }
 ##############################################################################################################################################
 ##############################################################################################################################################
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
-
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
