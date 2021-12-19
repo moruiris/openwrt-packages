@@ -49,20 +49,17 @@ jobs:
         rm -rf * >/dev/null 2>&1
         $GITHUB_WORKSPACE/.github/diy/${{matrix.target}}.sh
         $GITHUB_WORKSPACE/.github/diy/convert_translation.sh
-
         
     - name: Upload
       env: 
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
-        [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
         [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -m "update$(TZ='Asia/Shanghai' date +-%m.%d)"
         git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/moruiris/openwrt-packages.git" HEAD:${{matrix.target}}
-        
-        
+               
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
