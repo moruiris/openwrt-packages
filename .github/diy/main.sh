@@ -5,16 +5,16 @@ rm -rf $1
 }
 ##############################################################################################################################################
 ##############################################################################################################################################
-#################################################tools编译工具###############################################################################
-#svn co https://github.com/coolsnowwolf/lede/trunk/tools ./tools
-#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/default-settings ./luci-default-settings
-#svn co https://github.com/immortalwrt/immortalwrt/branches/master/tools ./tools
 ##############################################################################################################################################
 #################################################弃用##########################################################################################
 ########################################luci-app-netdata-实时监控#############################################
 #原作者
-#二次修改 lede不支持弃用
+#二次修改
 #git clone https://github.com/sirpdboy/luci-app-netdata
+########################################luci-app-oaf-应用过滤#############################################
+#原作者
+#svn co https://github.com/destan19/OpenAppFilter/trunk ./openwrt-oaf
+#mv -n openwrt-oaf/luci-app-oaf ./luci-app-oaf
 ########################################luci-app-netspeedtest- 网络速度测试#############################################
 #原作者
 #svn co https://github.com/sirpdboy/netspeedtest/trunk/luci-app-netspeedtest
@@ -38,10 +38,6 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #原作者
 git clone https://github.com/xiaorouji/openwrt-passwall
 mv -n openwrt-passwall/luci-app-passwall ./
-rm -rf ./openwrt-passwall/dns2socks
-rm -rf ./openwrt-passwall/ipt2socks
-rm -rf ./openwrt-passwall/microsocks
-rm -rf ./openwrt-passwall/pdnsd-alt
 ########################################luci-app-ssr-plus#############################################
 #原作者
 git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus
@@ -51,14 +47,9 @@ mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
 #passwall内置了chinadns-ng，就不用这个重复了
 #git clone https://github.com/pexcn/openwrt-chinadns-ng
-########################################luci-app-oaf-应用过滤#############################################
-#原作者
-#svn co https://github.com/destan19/OpenAppFilter/trunk ./openwrt-oaf
-#mv -n openwrt-oaf/luci-app-oaf ./luci-app-oaf
 ############################################################################################################################################################
 #################################################主题########################################################################################################
-#原作者
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+git clone https://github.com/jerrykuku/luci-theme-argon.git
 git clone https://github.com/jerrykuku/luci-app-argon-config
 
 ####################################################################################
