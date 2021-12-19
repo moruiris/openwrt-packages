@@ -30,10 +30,10 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
 ########################################luci-app-adguardhome##########################################
 #原作者
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome
+#弃用，版本固定 更新不了
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #二次修改
-#git clone https://github.com/kongfl888/luci-app-adguardhome
-#最新修改
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome
 ########################################luci-app-passwall#############################################
 #原作者
 git clone https://github.com/xiaorouji/openwrt-passwall
