@@ -3,6 +3,13 @@
 <h1 align="center">同步上游分支代码</h1>
 </div>
 
+## openwrt官方自用：
+```bash
+ git clone -b openwrt https://github.com/moruiris/openwrt-packages
+```
+```bash
+ src-git moruiris https://github.com/moruiris/openwrt-packages;openwrt
+```
 ## openwrt-packages
 
 *  常用OpenWrt软件包源码合集，每天自动同步上游更新！
