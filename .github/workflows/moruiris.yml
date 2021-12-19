@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   push:
     paths:
-      - '.github/**'
+      - '.github/diy/**'
   schedule:
     - cron: 0 */12 * * *
   watch:
