@@ -48,7 +48,7 @@ jobs:
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf * >/dev/null 2>&1
         $GITHUB_WORKSPACE/.github/diy/${{matrix.target}}.sh
-#        $GITHUB_WORKSPACE/.github/diy/convert_translation.sh
+        $GITHUB_WORKSPACE/.github/diy/convert_translation.sh
         
     - name: Upload
       env: 
