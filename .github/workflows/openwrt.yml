@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   push:
     paths:
-      - '.github/diy/**'
+      - '.github/diy/openwrt.sh'
   schedule:
     - cron: 0 */12 * * *
   watch:
