@@ -38,19 +38,21 @@ git clone https://github.com/kongfl888/luci-app-adguardhome
 #原作者
 git clone https://github.com/xiaorouji/openwrt-passwall
 mv -n openwrt-passwall/luci-app-passwall ./
-rm -rf ./openwrt-passwall/dns2socks
-rm -rf ./openwrt-passwall/ipt2socks
-rm -rf ./openwrt-passwall/microsocks
-rm -rf ./openwrt-passwall/pdnsd-alt
+mv -n openwrt-passwall ./luci-app-passwall/passwall
+rm -rf ./luci-app-passwall/passwall/dns2socks
+rm -rf ./luci-app-passwall/passwall/ipt2socks
+rm -rf ./luci-app-passwall/passwall/microsocks
+rm -rf ./luci-app-passwall/passwall/pdnsd-alt
 ########################################luci-app-ssr-plus#############################################
 #原作者
-git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus
-mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
+git clone https://github.com/fw876/helloworld
+mv -n helloworld/luci-app-ssr-plus ./
+mv -n helloworld ./luci-app-ssr-plus/ssr-plus
 ########################################luci-app-chinadns-ng#############################################
 #原作者
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
 #passwall内置了chinadns-ng，就不用这个重复了
-#git clone https://github.com/pexcn/openwrt-chinadns-ng
+#git clone https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng/chinadns-ng
 ############################################################################################################################################################
 #################################################主题########################################################################################################
 ########################################luci-app-argon#############################################
