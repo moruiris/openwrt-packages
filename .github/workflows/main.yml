@@ -1,4 +1,4 @@
-name: Merge-upstream
+name: Merge-upstream-main
 
 on:
   repository_dispatch:
