@@ -23,7 +23,7 @@ git clone https://github.com/kongfl888/luci-app-adguardhome
 #原作者
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
 git clone https://github.com/pexcn/openwrt-chinadns-ng
-mv ./openwrt-chinadns-ng ./packages/chinadns-ng
+mv -n openwrt-chinadns-ng/ ./packages/chinadns-ng/
 ############################################################################################################################################################
 #################################################主题########################################################################################################
 git clone https://github.com/jerrykuku/luci-theme-argon.git
