@@ -45,9 +45,9 @@ rm -rf ./packages/passwall/microsocks
 rm -rf ./packages/passwall/pdnsd-alt
 ########################################luci-app-ssr-plus#############################################
 #原作者
-git clone https://github.com/fw876/helloworld ./ssr-plus
-mv -n ssr-plus/luci-app-ssr-plus ./
-mv -n ssr-plus ./packages/
+git clone https://github.com/fw876/helloworld
+mv -n helloworld/luci-app-ssr-plus ./
+mv -n helloworld ./packages/ssr-plus
 ########################################luci-app-chinadns-ng#############################################
 #原作者
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
