@@ -54,7 +54,7 @@ git clone https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng/ch
 #################################################主题########################################################################################################
 ########################################luci-app-argon#############################################
 #原作者
-git clone https://github.com/jerrykuku/luci-theme-argon.git
+#git clone https://github.com/jerrykuku/luci-theme-argon.git
 
 ####################################################################################
 
