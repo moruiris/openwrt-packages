@@ -33,10 +33,10 @@ git clone https://github.com/kongfl888/luci-app-adguardhome
 ########################################luci-app-chinadns-ng#############################################
 #原作者
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
-git clone https://github.com/pexcn/openwrt-chinadns-ng
+#git clone https://github.com/pexcn/openwrt-chinadns-ng
 ########################################luci-app-passwall#############################################
 #原作者 第2版
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall2
+svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
 git clone https://github.com/xiaorouji/openwrt-passwall
 #二次作者保留
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
