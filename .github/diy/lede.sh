@@ -7,10 +7,6 @@ rm -rf $1
 ##############################################################################################################################################
 ##############################################################################################################################################
 #################################################弃用##########################################################################################
-########################################luci-app-netdata-实时监控#############################################
-#原作者
-#二次修改 lede不支持弃用
-#git clone https://github.com/sirpdboy/luci-app-netdata
 ########################################luci-app-oaf-应用过滤#############################################
 #原作者
 #svn co https://github.com/destan19/OpenAppFilter/trunk ./openwrt-oaf
@@ -19,17 +15,6 @@ rm -rf $1
 #原作者
 #svn co https://github.com/sirpdboy/netspeedtest/trunk/luci-app-netspeedtest
 #rm -rf ./luci-app-netspeedtest/po/zh_Hans
-########################################luci-app-passwall#############################################
-#原作者(已删库)弃用
-#git clone https://github.com/xiaorouji/openwrt-passwall
-#mv -n openwrt-passwall/luci-app-passwall ./
-#二次作者保留
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
-#git clone https://github.com/kenzok8/small ./openwrt-passwall
-#rm -rf ./openwrt-passwall/dns2socks
-#rm -rf ./openwrt-passwall/ipt2socks
-#rm -rf ./openwrt-passwall/microsocks
-#rm -rf ./openwrt-passwall/pdnsd-alt
 ##############################################################################################################################################
 #################################################软件##########################################################################################
 ########################################luci-app-smartdns#############################################
@@ -45,14 +30,25 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #二次修改
 git clone https://github.com/kongfl888/luci-app-adguardhome
-########################################luci-app-ssr-plus#############################################
-#原作者
-git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus
-mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
 ########################################luci-app-chinadns-ng#############################################
 #原作者
 git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
 git clone https://github.com/pexcn/openwrt-chinadns-ng
+########################################luci-app-passwall#############################################
+#原作者 第2版
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall
+#二次作者保留
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
+#git clone https://github.com/kenzok8/small ./openwrt-passwall
+rm -rf ./openwrt-passwall/dns2socks
+rm -rf ./openwrt-passwall/ipt2socks
+rm -rf ./openwrt-passwall/microsocks
+rm -rf ./openwrt-passwall/pdnsd-alt
+########################################luci-app-ssr-plus#############################################
+#原作者
+git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus
+mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
 ############################################################################################################################################################
 #################################################主题########################################################################################################
 ########################################luci-app-argon#############################################
