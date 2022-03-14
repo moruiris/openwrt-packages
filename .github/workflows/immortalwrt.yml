@@ -1,4 +1,4 @@
-name: Merge-upstream-openwrt
+name: Merge-upstream-immortalwrt
 
 on:
   repository_dispatch:
