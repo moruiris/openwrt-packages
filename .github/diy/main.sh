@@ -23,11 +23,11 @@ rm -rf $1
 #################################################软件##########################################################################################
 ########################################luci-app-smartdns#############################################
 #原作者
-#git clone https://github.com/pymumu/luci-app-smartdns
-#git clone https://github.com/pymumu/openwrt-smartdns
+git clone https://github.com/pymumu/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns
 #二次修改
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
-svn co https://github.com/kenzok8/openwrt-packages/trunk/smartdns ././openwrt-smartdns
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/smartdns ././openwrt-smartdns
 ########################################luci-app-adguardhome##########################################
 #原作者
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome
