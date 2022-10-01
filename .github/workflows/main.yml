@@ -60,10 +60,3 @@ jobs:
         git add .
         git commit -m "update$(TZ='Asia/Shanghai' date +-%m.%d)"
         git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/moruiris/openwrt-packages.git" HEAD:${{matrix.target}}
-               
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
-      with:
-        retain_days: 1
-        keep_minimum_runs: 0
-
