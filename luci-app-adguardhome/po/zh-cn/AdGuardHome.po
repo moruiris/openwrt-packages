@@ -91,6 +91,12 @@ msgstr "执行文件路径"
 msgid "AdGuardHome Bin path if no bin will auto download"
 msgstr "AdGuardHome 执行文件路径 如果没有执行文件将自动下载"
 
+msgid "choose Arch for download"
+msgstr "要下载的程序架构"
+
+msgid "Need to save to config first before downloading."
+msgstr "手动下载前如该选项有变更需先保存并应用后再点下载。"
+
 msgid "use upx to compress bin after download"
 msgstr "下载后使用upx压缩执行文件"
 
@@ -153,6 +159,12 @@ msgstr "删除gfw列表"
 
 msgid "Del"
 msgstr "删除"
+
+msgid "will set to name gfwlist"
+msgstr "将会配置给名为gfwlist的ipset集合"
+
+msgid "(ipset only)"
+msgstr "（仅ipset）"
 
 #hide div
 msgid "Gfwlist upstream dns server"
@@ -229,6 +241,9 @@ msgstr "自动更新ipv6主机并重启adh"
 
 msgid "Auto update gfwlist and restart adh"
 msgstr "自动更新gfw列表并重启adh"
+
+msgid "Auto update ipset list and restart adh"
+msgstr "自动更新gfw ipset列表并重启adh"
 
 msgid "Please change time and args in crontab"
 msgstr "请在计划任务中修改时间和参数"
