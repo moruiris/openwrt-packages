@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-adguardhome
 PKG_VERSION:=1.8
-PKG_RELEASE:=20200824
+PKG_RELEASE:=20221023
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
@@ -69,6 +69,12 @@ uci -q batch <<-EOF >/dev/null 2>&1
 	commit ucitrack
 EOF
 fi
+exit 0
+endef
+
+define Package/luci-app-adguardhome/postrm
+#!/bin/sh
+rm -rf /etc/AdGuardHome/
 exit 0
 endef
 
