@@ -1,8 +1,6 @@
 name: Merge-upstream-openwrt
 
 on:
-  workflow_dispatch:
-  repository_dispatch:
   push:
     paths:
       - '.github/diy/openwrt.sh'
@@ -10,14 +8,12 @@ on:
     - cron: 0 */12 * * *
   watch:
     types: started
-
-env:
-  TZ: Asia/Shanghai
+  repository_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
+    if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
+    runs-on: Ubuntu-20.04
 
     name: Update ${{matrix.target}}
     strategy:
@@ -27,17 +23,15 @@ jobs:
         
     steps:
     - name: Checkout
-      uses: actions/checkout@main
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Initialization environment
-      env:
-        DEBIAN_FRONTEND: noninteractive
-      run: |
-        sudo -E apt-get -qq update
-        sudo -E apt-get -qq install git subversion git-core wget
-        sudo timedatectl set-timezone "$TZ"
+      run : |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
+        sudo timedatectl set-timezone "Asia/Shanghai"
         
     - name: Clone packages
       run: |
@@ -57,5 +51,5 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
-        git commit -m "update$(TZ='Asia/Shanghai' date +-%m.%d)"
+        git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
         git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/moruiris/openwrt-packages.git" HEAD:${{matrix.target}}
