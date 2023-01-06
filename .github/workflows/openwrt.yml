@@ -2,19 +2,17 @@ name: Merge-upstream-openwrt
 
 on:
   push:
+    branches:
+      - main
     paths:
       - '.github/diy/openwrt.sh'
   schedule:
     - cron: 0 */12 * * *
-  watch:
-    types: started
-  repository_dispatch:
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
 
     name: Update ${{matrix.target}}
     strategy:
