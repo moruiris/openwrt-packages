@@ -17,7 +17,7 @@ rm -rf $1
 git clone https://github.com/kongfl888/luci-app-adguardhome
 ########################################luci-app-chinadns-ng#############################################
 #原作者
-git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng
+git clone -b luci https://github.com/moruiris/openwrt-chinadns-ng ./luci-app-chinadns-ng
 #源码已有下列依赖
 #git clone https://github.com/pexcn/openwrt-chinadns-ng
 ############################################################################################################################################################
