@@ -1,11 +1,11 @@
-name: Merge-upstream-main
+name: Merge-upstream-packages
 
 on:
   push:
     branches:
       - main
     paths:
-      - '.github/diy/main.sh'
+      - '.github/diy/packages.sh'
   schedule:
     - cron: 0 */12 * * *
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [main]
+        target: [packages]
         
     steps:
     - name: Checkout
@@ -46,7 +46,6 @@ jobs:
       env: 
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
-        [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
