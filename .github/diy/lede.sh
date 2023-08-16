@@ -17,14 +17,14 @@ rm -rf $1
 #rm -rf ./luci-app-netspeedtest/po/zh_Hans
 ########################################luci-app-chinadns-ng#############################################
 #原作者
-git clone -b luci https://github.com/moruiris/openwrt-chinadns-ng ./luci-app-chinadns-ng
-git clone https://github.com/pexcn/openwrt-chinadns-ng
+# git clone -b luci https://github.com/moruiris/openwrt-chinadns-ng ./luci-app-chinadns-ng
+# git clone https://github.com/pexcn/openwrt-chinadns-ng
 ##############################################################################################################################################
 #################################################软件##########################################################################################
 ########################################luci-app-smartdns#############################################
 #原作者
 git clone -b lede https://github.com/pymumu/luci-app-smartdns
-git clone https://github.com/pymumu/openwrt-smartdns
+# git clone https://github.com/pymumu/openwrt-smartdns
 #二次修改
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
 ########################################luci-app-adguardhome##########################################
