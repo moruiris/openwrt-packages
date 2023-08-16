@@ -18,13 +18,13 @@ rm -rf $1
 ########################################luci-app-chinadns-ng#############################################
 #原作者
 git clone -b luci https://github.com/moruiris/openwrt-chinadns-ng ./luci-app-chinadns-ng
-git clone https://github.com/pexcn/openwrt-chinadns-ng ./luci-app-chinadns-ng/openwrt-chinadns-ng
+git clone https://github.com/pexcn/openwrt-chinadns-ng
 ##############################################################################################################################################
 #################################################软件##########################################################################################
 ########################################luci-app-smartdns#############################################
 #原作者
 git clone -b lede https://github.com/pymumu/luci-app-smartdns
-git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns/openwrt-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns
 #二次修改
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
 ########################################luci-app-adguardhome##########################################
@@ -37,13 +37,13 @@ git clone https://github.com/kongfl888/luci-app-adguardhome
 ########################################luci-app-cloudflarespeedtest##########################################
 #原作者
 svn co https://github.com/mingxiaoyu/luci-app-cloudflarespeedtest/trunk/applications/luci-app-cloudflarespeedtest
-git clone https://github.com/immortalwrt-collections/openwrt-cdnspeedtest ./luci-app-cloudflarespeedtest/openwrt-cloudflarespeedtest
+git clone https://github.com/immortalwrt-collections/openwrt-cdnspeedtest ./openwrt-cloudflarespeedtest
 ########################################luci-app-passwall#############################################
 #原作者 第1版luci-app-passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
 #原作者 第2版luci-app-passwall2
 svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
-git clone -b packages https://github.com/xiaorouji/openwrt-passwall ./luci-app-passwall/openwrt-passwall
+git clone -b packages https://github.com/xiaorouji/openwrt-passwall
 #二次作者保留
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
 #git clone https://github.com/kenzok8/small ./openwrt-passwall
@@ -54,8 +54,7 @@ git clone -b packages https://github.com/xiaorouji/openwrt-passwall ./luci-app-p
 ########################################luci-app-ssr-plus#############################################
 #原作者
 git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus
-mv -n openwrt-ssr-plus/luci-app-ssr-plus ./luci-app-ssr-plus
-mv -n openwrt-ssr-plus ./luci-app-ssr-plus/openwrt-ssr-plus
+mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
 ########################################luci-app-openclash#############################################
 #原作者
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
