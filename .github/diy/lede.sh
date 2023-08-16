@@ -34,6 +34,10 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #二次修改
 git clone https://github.com/kongfl888/luci-app-adguardhome
+########################################luci-app-cloudflarespeedtest##########################################
+#原作者
+svn co https://github.com/XIU2/CloudflareSpeedTest/trunk/applications/luci-app-cloudflarespeedtest
+git clone https://github.com/immortalwrt-collections/openwrt-cdnspeedtest
 ########################################luci-app-passwall#############################################
 #原作者 第1版luci-app-passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
