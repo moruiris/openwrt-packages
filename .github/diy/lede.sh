@@ -33,7 +33,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages ./openwrt-passw
 #原作者 第1版luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall && mv openwrt-passwall/luci-app-passwall ./ && rm -rf openwrt-passwall
 #原作者 第2版luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall2 && mv openwrt-passwall2/luci-app-passwall ./ && rm -rf openwrt-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2 && mv openwrt-passwall2/luci-app-passwall2 ./ && rm -rf openwrt-passwall2
 ########################################luci-app-ssr-plus#############################################
 #原作者
 git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus && mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
