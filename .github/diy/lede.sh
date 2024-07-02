@@ -31,9 +31,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages ./openwrt-passw
 #rm -rf ./openwrt-passwall/microsocks
 #rm -rf ./openwrt-passwall/pdnsd-alt
 #原作者 第1版luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall && mv openwrt-passwall/luci-app-passwall ./ && rm -rf openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv passwall/luci-app-passwall ./ && rm -rf passwall
 #原作者 第2版luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall2 && mv openwrt-passwall2/luci-app-passwall2 ./ && rm -rf openwrt-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv passwall/luci-app-passwall2 ./ && rm -rf passwall
 ########################################luci-app-ssr-plus#############################################
 #原作者
 git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus && mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
