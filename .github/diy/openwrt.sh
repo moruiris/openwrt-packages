@@ -10,15 +10,12 @@ rm -rf $1
 #git clone https://github.com/pymumu/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns
 #二次修改
-svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns
-svn export https://github.com/kenzok8/openwrt-packages/trunk/smartdns ././openwrt-smartdns
+git clone https://github.com/kenzok8/openwrt-packages && mv openwrt-packages/luci-app-smartdns ./ && mv openwrt-packages/smartdns ./openwrt-smartdns && rm -rf openwrt-packages
 ############################################################################################################################################################
 #################################################软件##########################################################################################
 ########################################luci-app-adguardhome##########################################
 #原作者
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome
-#弃用，版本固定 更新不了
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #二次修改
 git clone https://github.com/kongfl888/luci-app-adguardhome
 ########################################luci-app-chinadns-ng#############################################
