@@ -36,7 +36,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv passwal
 git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv passwall/luci-app-passwall2 ./ && rm -rf passwall
 ########################################luci-app-ssr-plus#############################################
 #原作者
-git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus && mv -n openwrt-ssr-plus/luci-app-ssr-plus ./
+git clone https://github.com/fw876/helloworld ./openwrt-ssr-plus && mv openwrt-ssr-plus/luci-app-ssr-plus ./
 ############################################################################################################################################################
 #################################################主题########################################################################################################
 ########################################luci-app-argon#############################################
