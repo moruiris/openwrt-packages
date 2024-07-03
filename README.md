@@ -6,21 +6,21 @@
 # 自用
 ## openwrt官方自用：
 ```bash
- git clone -b openwrt https://github.com/moruiris/openwrt-packages ./package/
+ git clone -b openwrt https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
 ```
 ```bash
  src-git openwrt-packages https://github.com/moruiris/openwrt-packages;openwrt
 ```
 ## lede自用：
 ```bash
- git clone -b lede https://github.com/moruiris/openwrt-packages ./package/
+ git clone -b lede https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
 ```
 ```bash
  src-git openwrt-packages https://github.com/moruiris/openwrt-packages;lede
 ```
 ## immortalwrt自用：
 ```bash
- git clone -b immortalwrt https://github.com/moruiris/openwrt-packages ./package/
+ git clone -b immortalwrt https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
 ```
 ```bash
  src-git openwrt-packages https://github.com/moruiris/openwrt-packages;immortalwrt
@@ -43,7 +43,7 @@
 ```
 3. lede/下运行 或者openwrt/下运行
 ```bash
-git clone -b packages https://github.com/moruiris/openwrt-packages ./package/
+git clone -b packages https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
 ```
 
 
