@@ -6,24 +6,24 @@
 # 自用
 ## openwrt官方自用：
 ```bash
- git clone -b openwrt https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
+git clone -b openwrt https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
 ```
 ```bash
- src-git openwrt-packages https://github.com/moruiris/openwrt-packages;openwrt
+src-git openwrt-packages https://github.com/moruiris/openwrt-packages;openwrt
 ```
 ## lede自用：
 ```bash
- git clone -b lede https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
+git clone -b lede https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
 ```
 ```bash
- src-git openwrt-packages https://github.com/moruiris/openwrt-packages;lede
+src-git openwrt-packages https://github.com/moruiris/openwrt-packages;lede
 ```
 ## immortalwrt自用：
 ```bash
- git clone -b immortalwrt https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
+git clone -b immortalwrt https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
 ```
 ```bash
- src-git openwrt-packages https://github.com/moruiris/openwrt-packages;immortalwrt
+src-git openwrt-packages https://github.com/moruiris/openwrt-packages;immortalwrt
 ```
 
 # 插件源码
@@ -35,11 +35,11 @@
 `还是建议按需取用，不然碰到依赖问题不太好解决`
 1. 先cd进package目录，然后执行
 ```bash
- git clone -b packages https://github.com/moruiris/openwrt-packages
+git clone -b packages https://github.com/moruiris/openwrt-packages
 ```
 2. 或者添加下面代码到feeds.conf.default文件
 ```bash
- src-git openwrt-packages https://github.com/moruiris/openwrt-packages;packages
+src-git openwrt-packages https://github.com/moruiris/openwrt-packages;packages
 ```
 3. lede/下运行 或者openwrt/下运行
 ```bash
