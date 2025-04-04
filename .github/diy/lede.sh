@@ -9,7 +9,7 @@ rm -rf $1
 #git clone https://github.com/pymumu/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns-package
 #二次修改
-git clone https://github.com/kenzok8/openwrt-packages && mv openwrt-packages/luci-app-smartdns ./ && mv openwrt-packages/smartdns ./luci-app-smartdns-package && rm -rf openwrt-packages
+git clone https://github.com/kenzok8/openwrt-packages && mv openwrt-packages/luci-app-smartdns ./ && mv openwrt-packages/smartdns ./packages-smartdns && rm -rf openwrt-packages
 #####################################################################################################
 
 ########################################luci-app-adguardhome##########################################
@@ -20,7 +20,7 @@ git clone https://github.com/kongfl888/luci-app-adguardhome
 #######################################################################################################
 
 ########################################luci-app-passwall##########################################
-git clone https://github.com/xiaorouji/openwrt-passwall-packages ./luci-app-passwall-package
+git clone https://github.com/xiaorouji/openwrt-passwall-packages ./packages-passwall
 #rm -rf ./openwrt-passwall/dns2socks
 #rm -rf ./openwrt-passwall/ipt2socks
 #rm -rf ./openwrt-passwall/microsocks
@@ -33,7 +33,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv passwa
 
 ########################################luci-app-ssr-plus#############################################
 #原作者
-git clone https://github.com/fw876/helloworld ./luci-app-ssr-plus-package && mv luci-app-ssr-plus-package/luci-app-ssr-plus ./
+git clone https://github.com/fw876/helloworld ./packages-ssr-plus && mv ./packages-ssr-plus/luci-app-ssr-plus ./
 #######################################################################################################
 
 #################################################主题########################################################################################################
