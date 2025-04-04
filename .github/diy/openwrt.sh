@@ -9,7 +9,7 @@ rm -rf $1
 #git clone https://github.com/pymumu/luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns-package
 #二次修改
-git clone https://github.com/kenzok8/openwrt-packages && mv openwrt-packages/luci-app-smartdns ./ && mv openwrt-packages/smartdns ./luci-app-smartdns-package && rm -rf openwrt-packages
+git clone https://github.com/kenzok8/openwrt-packages && mv openwrt-packages/luci-app-smartdns ./ && mv openwrt-packages/smartdns ./packages-smartdns && rm -rf openwrt-packages
 #####################################################################################################
 
 ########################################luci-app-adguardhome##########################################
