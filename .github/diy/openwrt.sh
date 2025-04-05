@@ -17,10 +17,16 @@ rm -rf openwrt-packages
 #####################################################################################################
 
 ########################################luci-app-adguardhome##########################################
-#原作者
+#原作者,弃用
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome
-#二次修改
-git clone https://github.com/kongfl888/luci-app-adguardhome
+#二次修改,弃用
+#git clone https://github.com/kongfl888/luci-app-adguardhome
+#三次修改
+git clone https://github.com/kenzok8/openwrt-packages
+mkdir ./packages_luci-app-adguardhome
+mv openwrt-packages/luci-app-adguardhome ./packages_luci-app-smartdns/
+mv openwrt-packages/adguardhome ./packages_luci-app-smartdns/
+rm -rf openwrt-packages
 #######################################################################################################
 
 #################################################主题########################################################################################################
