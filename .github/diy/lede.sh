@@ -6,10 +6,8 @@ rm -rf $1
 
 ########################################luci-app-smartdns#############################################
 #原作者 openwrt已有
-#git clone https://github.com/pymumu/luci-app-smartdns
-#git clone https://github.com/pymumu/openwrt-smartdns ./packages-smartdns
-#二次修改
-git clone https://github.com/kenzok8/openwrt-packages && mv openwrt-packages/luci-app-smartdns ./ && mv openwrt-packages/smartdns ./packages-smartdns && rm -rf openwrt-packages
+git clone -b lede https://github.com/pymumu/luci-app-smartdns ./packages_luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns ./packages_luci-app-smartdns/smartdns
 #####################################################################################################
 
 ########################################luci-app-adguardhome##########################################
@@ -20,20 +18,20 @@ git clone https://github.com/kongfl888/luci-app-adguardhome
 #######################################################################################################
 
 ########################################luci-app-passwall##########################################
-git clone https://github.com/xiaorouji/openwrt-passwall-packages ./packages-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages ./packages_luci-app-passwall
 #rm -rf ./openwrt-passwall/dns2socks
 #rm -rf ./openwrt-passwall/ipt2socks
 #rm -rf ./openwrt-passwall/microsocks
 #rm -rf ./openwrt-passwall/pdnsd-alt
 #原作者 第1版luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv passwall/luci-app-passwall ./ && rm -rf passwall
+git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv passwall/luci-app-passwall ./packages_luci-app-passwall/ && rm -rf passwall
 #原作者 第2版luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv passwall/luci-app-passwall2 ./ && rm -rf passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv passwall/luci-app-passwall2 ./packages_luci-app-passwall/ && rm -rf passwall
 #######################################################################################################
 
 ########################################luci-app-ssr-plus#############################################
 #原作者
-git clone https://github.com/fw876/helloworld ./packages-ssr-plus && mv ./packages-ssr-plus/luci-app-ssr-plus ./
+git clone https://github.com/fw876/helloworld ./packages_luci-app-ssr-plus 
 #######################################################################################################
 
 #################################################主题########################################################################################################
