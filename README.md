@@ -26,25 +26,7 @@ git clone -b immortalwrt https://github.com/moruiris/openwrt-packages ./package/
 src-git moruiris https://github.com/moruiris/openwrt-packages.git;immortalwrt
 ```
 
-# 插件源码
-## packages分支
-*  常用OpenWrt软件包源码合集，每天自动同步上游更新！
-*  通用版luci适合18.06与19.07及以上
-*  感谢以上github仓库所有者！
-## 使用方式（三选一）：
-`还是建议按需取用，不然碰到依赖问题不太好解决`
-1. 先cd进package目录，然后执行
-```bash
-git clone -b packages https://github.com/moruiris/openwrt-packages
-```
-2. 或者添加下面代码到feeds.conf.default文件
-```bash
-src-git openwrt-packages https://github.com/moruiris/openwrt-packages;packages
-```
-3. lede/下运行 或者openwrt/下运行
-```bash
-git clone -b packages https://github.com/moruiris/openwrt-packages ./package/openwrt-packages
-```
+
 
 
 
