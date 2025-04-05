@@ -6,7 +6,7 @@ rm -rf $1
 
 ########################################luci-app-smartdns#############################################
 #原作者 openwrt已有
-mkdir ./packages_luci-app-smartdns
+mkdir ./packages_luci-app-smartdns/
 git clone -b master https://github.com/pymumu/luci-app-smartdns && mv ./luci-app-smartdns ./packages_luci-app-smartdns/
 git clone https://github.com/pymumu/openwrt-smartdns ./smartdns && mv ./smartdns ./packages_luci-app-smartdns/
 #####################################################################################################
