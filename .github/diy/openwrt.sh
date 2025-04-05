@@ -7,7 +7,7 @@ rm -rf $1
 ########################################luci-app-smartdns#############################################
 #原作者 openwrt已有
 git clone -b master https://github.com/pymumu/luci-app-smartdns ./packages_luci-app-smartdns/luci-app-smartdns
-git clone https://github.com/pymumu/openwrt-smartdns ./smartdns
+git clone https://github.com/pymumu/openwrt-smartdns ./packages_luci-app-smartdns/smartdns
 #####################################################################################################
 
 ########################################luci-app-adguardhome##########################################
@@ -23,7 +23,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git
 ###########################################################################################################################################################
 
 
-rm -rf ./*/.git & rm -f ./*/.gitattributes
-rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
-rm -rf ./*/*/.svn & rm -rf ./*/*/.github & rm -rf ./*/*/.gitignore
+
+rm -rf ./*/.git & rm -rf ./*/.gitattributes & rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
+rm -rf ./*/*/.git & rm -rf ./*/*/.gitattributes &rm -rf ./*/*/.svn & rm -rf ./*/*/.github & rm -rf ./*/*/.gitignore
 exit 0
