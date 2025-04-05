@@ -12,8 +12,8 @@ rm -rf $1
 #三次修改
 git clone https://github.com/kenzok8/openwrt-packages
 mkdir ./packages_luci-app-adguardhome
-mv openwrt-packages/luci-app-adguardhome ./packages_luci-app-smartdns/
-mv openwrt-packages/adguardhome ./packages_luci-app-smartdns/
+mv openwrt-packages/luci-app-adguardhome ./packages_luci-app-adguardhome/
+mv openwrt-packages/adguardhome ./packages_luci-app-adguardhome/
 rm -rf openwrt-packages
 #######################################################################################################
 
