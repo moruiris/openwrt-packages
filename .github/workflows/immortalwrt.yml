@@ -41,12 +41,12 @@ jobs:
         $GITHUB_WORKSPACE/diy/convert_translation.sh
     - name: Upload
       env: 
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
-        git push --quiet "https://${GITHUB_TOKEN}}@github.com/moruiris/openwrt-packages.git" HEAD:${{matrix.target}}
+        git push --quiet "https://${GH_TOKEN}}@github.com/moruiris/openwrt-packages.git" HEAD:${{matrix.target}}
     - name: delete-older-workflow
       uses: GitRML/delete-workflow-runs@main
       with:
