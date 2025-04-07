@@ -55,6 +55,3 @@ jobs:
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 3
-      uses: GitRML/delete-workflow-runs@main
-      with:
-        retain_days: 3
