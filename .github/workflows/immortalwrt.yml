@@ -20,6 +20,8 @@ jobs:
       fail-fast: false
       matrix:
         target: [immortalwrt]
+    permissions:
+      contents: write
     steps:
     - name: Checkout
       uses: actions/checkout@main
