@@ -40,6 +40,8 @@ jobs:
         $GITHUB_WORKSPACE/diy/${{matrix.target}}.sh
         $GITHUB_WORKSPACE/diy/convert_translation.sh
     - name: Upload
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
