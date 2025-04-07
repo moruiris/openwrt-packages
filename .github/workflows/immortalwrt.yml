@@ -46,7 +46,6 @@ jobs:
         git add .
         if git diff --cached --quiet; then
           echo "nothing to commit"
-          exit 0
         else
           git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
           git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
