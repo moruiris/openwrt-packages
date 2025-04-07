@@ -44,7 +44,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/${BRANCH}
         git add .
-        git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')" 2>&1
+        git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')" >/dev/null 2>&1
         git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
     - name: delete-older-workflow
       if: (!cancelled())
