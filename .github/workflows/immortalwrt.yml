@@ -39,8 +39,6 @@ jobs:
         $GITHUB_WORKSPACE/diy/${PATHS}
         $GITHUB_WORKSPACE/diy/convert_translation.sh
     - name: Upload
-      env: 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd $GITHUB_WORKSPACE/${BRANCH}
         git add .
@@ -48,7 +46,7 @@ jobs:
           echo "nothing to commit"
         else
           git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
-          git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
+          git push --quiet "https://x-access-token:${secrets.GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
         fi
     - name: delete-older-workflow
       if: (!cancelled())
