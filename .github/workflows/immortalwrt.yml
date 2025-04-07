@@ -46,7 +46,7 @@ jobs:
           echo "nothing to commit"
         else
           git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
-          git push --quiet "https://x-access-token:${secrets.GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
+          git push --quiet "https://${secrets.GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
         fi
     - name: delete-older-workflow
       if: (!cancelled())
