@@ -24,29 +24,29 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
     - name: Initialization environment
-      run : |
+      run: |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
         sudo timedatectl set-timezone "Asia/Shanghai"
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x ./diy/${{matrix.target}}.sh
+        chmod +x ./diy/${{ matrix.target }}.sh
         chmod +x ./diy/convert_translation.sh
-        git clone -b ${{matrix.target}} https://github.com/${REPO}.git ${{matrix.target}}
-        cd ${{matrix.target}}
-        git rm -r --cache * >/dev/null 2>&1 &
+        git clone -b ${{ matrix.target }} https://github.com/${REPO}.git ${{ matrix.target }}
+        cd ${{ matrix.target }}
+        git rm -r --cached * >/dev/null 2>&1 &
         rm -rf * >/dev/null 2>&1
-        $GITHUB_WORKSPACE/diy/${{matrix.target}}.sh
+        $GITHUB_WORKSPACE/diy/${{ matrix.target }}.sh
         $GITHUB_WORKSPACE/diy/convert_translation.sh
     - name: Upload
       env: 
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        cd $GITHUB_WORKSPACE/${{matrix.target}}
+        cd $GITHUB_WORKSPACE/${{ matrix.target }}
         git add .
-        git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
-        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/${REPO}.git" HEAD:${{matrix.target}}
+        git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
+        git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${{ matrix.target }}
     - name: delete-older-workflow
       uses: GitRML/delete-workflow-runs@main
       with:
