@@ -39,7 +39,7 @@ src-git moruiris https://github.com/moruiris/openwrt-packages.git;immortalwrt
 
 2. 复制页面中生成的 **Token**,并保存到本地,**Token 只会显示一次!**
 
-3. **Fork** 我的`small-package`仓库,然后进入你的`small-package`仓库进行之后的设置
+3. **Fork** 我的`openwrt-packages`仓库,然后进入你的`openwrt-packages`仓库进行之后的设置
 
 4. 点击上方菜单中的`Settings`,依次点击`Secrets`-`New repository secret`
 
