@@ -44,10 +44,17 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/${BRANCH}
         git add .
-        git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
-        git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
+        if git diff --cached --quiet; then
+          echo "nothing to commit"
+        else
+          git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
+          git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${BRANCH}
+        fi
     - name: delete-older-workflow
       if: (!cancelled())
+      uses: GitRML/delete-workflow-runs@main
+      with:
+        retain_days: 3
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 3
