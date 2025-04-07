@@ -47,6 +47,7 @@ jobs:
         git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
         git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git" HEAD:${{ matrix.target }}
     - name: delete-older-workflow
+      if: (!cancelled())
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 3
