@@ -1,10 +1,5 @@
 name: Merge-upstream-openwrt
 
-env:
-  REPO: moruiris/openwrt-packages
-  BRANCH: openwrt
-  PATHS: openwrt.sh
-
 on:
   workflow_dispatch:
   schedule:
@@ -13,12 +8,17 @@ on:
     branches:
       - main
     paths:
-      - './diy/${{ env.PATHS }}'
+      - './diy/openwrt.sh'
+
+env:
+  REPO: moruiris/openwrt-packages
+  BRANCH: openwrt
+  PATHS: openwrt.sh
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - name: Checkout
       uses: actions/checkout@main
