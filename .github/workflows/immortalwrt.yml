@@ -50,7 +50,7 @@ jobs:
         fi
     - name: delete-older-workflow
       if: (!cancelled())
-      uses: GitRML/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@v2
       with:
         delete_workflow_pattern: ${{ github.workflow }}
         retain_days: 0
