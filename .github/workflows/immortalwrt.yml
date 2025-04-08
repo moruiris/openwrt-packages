@@ -13,12 +13,11 @@ on:
     branches:
       - main
     paths:
-      - './diy/${{ env.PATHS }}'
+      - './diy/immortalwrt.sh'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout
       uses: actions/checkout@main
