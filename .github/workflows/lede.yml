@@ -1,10 +1,5 @@
 name: Merge-upstream-lede
 
-env:
-  REPO: moruiris/openwrt-packages
-  BRANCH: lede
-  PATHS: lede.sh
-
 on:
   workflow_dispatch:
   schedule:
@@ -15,9 +10,15 @@ on:
     paths:
       - './diy/lede.sh'
 
+env:
+  REPO: moruiris/openwrt-packages
+  BRANCH: lede
+  PATHS: lede.sh
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - name: Checkout
       uses: actions/checkout@main
