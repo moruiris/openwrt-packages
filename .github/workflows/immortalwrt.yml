@@ -1,10 +1,5 @@
 name: Merge-upstream-immortalwrt
 
-env:
-  REPO: moruiris/openwrt-packages
-  BRANCH: immortalwrt
-  PATHS: immortalwrt.sh
-
 on:
   workflow_dispatch:
   schedule:
@@ -15,9 +10,15 @@ on:
     paths:
       - './diy/immortalwrt.sh'
 
+env:
+  REPO: moruiris/openwrt-packages
+  BRANCH: immortalwrt
+  PATHS: immortalwrt.sh
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - name: Checkout
       uses: actions/checkout@main
