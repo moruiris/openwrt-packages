@@ -13,7 +13,7 @@ on:
     branches:
       - main
     paths:
-      - './diy/${PATHS}'
+      - './diy/${{ env.PATHS }}'
 
 jobs:
   build:
@@ -30,23 +30,23 @@ jobs:
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x ./diy/${PATHS}
+        chmod +x ./diy/${{ env.PATHS }}
         chmod +x ./diy/convert_translation.sh
-        git clone -b ${BRANCH} https://github.com/${REPO}.git ${BRANCH}
-        cd ${BRANCH}
+        git clone -b ${{ env.BRANCH }} https://github.com/${{ env.REPO }}.git ${{ env.BRANCH }}
+        cd ${{ env.BRANCH }}
         git rm -r --cached * >/dev/null 2>&1 &
         rm -rf * >/dev/null 2>&1
-        $GITHUB_WORKSPACE/diy/${PATHS}
+        $GITHUB_WORKSPACE/diy/${{ env.PATHS }}
         $GITHUB_WORKSPACE/diy/convert_translation.sh
     - name: Upload
       run: |
-        cd $GITHUB_WORKSPACE/${BRANCH}
+        cd $GITHUB_WORKSPACE/${{ env.BRANCH }}
         git add .
         if git diff --cached --quiet; then
           echo "nothing to commit"
         else
           git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
-          git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${REPO}.git" HEAD:${BRANCH}
+          git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ env.REPO }}.git" HEAD:${{ env.BRANCH }}
         fi
     - name: delete-older-workflow
       if: (!cancelled())
