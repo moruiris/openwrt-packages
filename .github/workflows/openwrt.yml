@@ -50,7 +50,7 @@ jobs:
         fi
     - name: delete-older-workflow
       if: (!cancelled())
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: Mattraks/delete-workflow-runs@main
       with:
         delete_workflow_pattern: ${{ github.workflow }}
         retain_days: 3
