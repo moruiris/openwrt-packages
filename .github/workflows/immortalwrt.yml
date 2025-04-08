@@ -52,4 +52,5 @@ jobs:
       if: (!cancelled())
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 3
+        delete_workflow_pattern: ${{ github.workflow }}
+        retain_days: 1
