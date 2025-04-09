@@ -3,12 +3,12 @@ name: Merge-upstream-immortalwrt
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: "0 */12 * * *"
   push:
     branches:
       - main
     paths:
-      - './diy/immortalwrt.sh'
+      - "./diy/immortalwrt.sh"
 
 env:
   REPO: moruiris/openwrt-packages
