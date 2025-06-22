@@ -6,14 +6,9 @@ rm -rf $1
 
 ########################################luci-app-smartdns#############################################
 #原作者 openwrt已有
-#git clone -b lede https://github.com/pymumu/luci-app-smartdns ./packages_luci-app-smartdns/luci-app-smartdns
-#git clone https://github.com/pymumu/openwrt-smartdns ./packages_luci-app-smartdns/smartdns
-#二次修改
-git clone https://github.com/kenzok8/openwrt-packages
-mkdir ./packages_luci-app-smartdns
-mv openwrt-packages/luci-app-smartdns ./packages_luci-app-smartdns/
-mv openwrt-packages/smartdns ./packages_luci-app-smartdns/
-rm -rf openwrt-packages
+git clone -b lede https://github.com/pymumu/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns luci-app-smartdns_packages/smartdns
+
 #####################################################################################################
 
 ########################################luci-app-adguardhome##########################################
@@ -23,23 +18,24 @@ rm -rf openwrt-packages
 #git clone https://github.com/kongfl888/luci-app-adguardhome
 #三次修改
 git clone https://github.com/kenzok8/openwrt-packages
-mkdir ./packages_luci-app-adguardhome
-mv openwrt-packages/luci-app-adguardhome ./packages_luci-app-adguardhome/
-mv openwrt-packages/adguardhome ./packages_luci-app-adguardhome/
+mv openwrt-packages/luci-app-adguardhome ./
+mkdir luci-app-adguardhome_packages
+mv openwrt-packages/adguardhome luci-app-adguardhome_packages/
 rm -rf openwrt-packages
 #######################################################################################################
 
 ########################################luci-app-passwall##########################################
-git clone https://github.com/xiaorouji/openwrt-passwall-packages ./packages_luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages ./luci-app-passwall_packages
 #原作者 第1版luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv ./passwall/luci-app-passwall ./packages_luci-app-passwall/ && rm -rf ./passwall
+git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv ./passwall/luci-app-passwall ./ && rm -rf ./passwall
 #原作者 第2版luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv ./passwall/luci-app-passwall2 ./packages_luci-app-passwall/ && rm -rf ./passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv ./passwall/luci-app-passwall2 ./ && rm -rf ./passwall
 #######################################################################################################
 
 ########################################luci-app-ssr-plus#############################################
 #原作者
-git clone https://github.com/fw876/helloworld ./packages_luci-app-ssr-plus 
+git clone https://github.com/fw876/helloworld ./luci-app-ssr-plus_packages
+mv /luci-app-ssr-plus_packages/luci-app-ssr-plus ./
 #######################################################################################################
 
 #################################################主题########################################################################################################
