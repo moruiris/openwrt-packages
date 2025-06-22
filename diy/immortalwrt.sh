@@ -13,7 +13,7 @@ rm -rf $1
 git clone https://github.com/kenzok8/openwrt-packages
 mv openwrt-packages/luci-app-adguardhome ./
 mkdir luci-app-adguardhome_packages
-mv openwrt-packages/adguardhome luci-app-adguardhome_packages
+mv openwrt-packages/adguardhome luci-app-adguardhome_packages/
 rm -rf openwrt-packages
 #######################################################################################################
 
