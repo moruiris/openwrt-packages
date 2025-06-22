@@ -35,7 +35,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv ./pass
 ########################################luci-app-ssr-plus#############################################
 #原作者
 git clone https://github.com/fw876/helloworld ./luci-app-ssr-plus_packages
-mv /luci-app-ssr-plus_packages/luci-app-ssr-plus ./
+mv luci-app-ssr-plus_packages/luci-app-ssr-plus ./
 #######################################################################################################
 
 #################################################主题########################################################################################################
