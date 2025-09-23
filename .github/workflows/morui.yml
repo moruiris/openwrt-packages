@@ -1,0 +1,56 @@
+name: Merge-upstream-openwrt
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "./diy/morui.sh"
+
+env:
+  REPO: moruiris/openwrt-packages
+  BRANCH: morui
+  PATHS: morui.sh
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+    - name: Initialization environment
+      run: |
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        sudo timedatectl set-timezone "Asia/Shanghai"
+    - name: Clone packages
+      run: |
+        cd $GITHUB_WORKSPACE
+        chmod +x ./diy/${{ env.PATHS }}
+        chmod +x ./diy/convert_translation.sh
+        git clone -b ${{ env.BRANCH }} https://github.com/${{ env.REPO }}.git ${{ env.BRANCH }}
+        cd ${{ env.BRANCH }}
+        git rm -r --cached * >/dev/null 2>&1 &
+        rm -rf * >/dev/null 2>&1
+        $GITHUB_WORKSPACE/diy/${{ env.PATHS }}
+        $GITHUB_WORKSPACE/diy/convert_translation.sh
+    - name: Upload
+      run: |
+        cd $GITHUB_WORKSPACE/${{ env.BRANCH }}
+        git add .
+        if git diff --cached --quiet; then
+          echo "nothing to commit"
+        else
+          git commit -am "update $(date '+%Y-%m-%d %H:%M:%S')"
+          git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ env.REPO }}.git" HEAD:${{ env.BRANCH }}
+        fi
+    - name: delete-older-workflow
+      if: (!cancelled())
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        delete_workflow_pattern: ${{ github.workflow }}
+        retain_days: 3
+        keep_minimum_runs: 0
