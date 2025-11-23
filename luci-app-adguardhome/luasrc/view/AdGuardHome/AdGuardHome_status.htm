@@ -1,0 +1,34 @@
+<script type="text/javascript">
+XHR.poll(3, '<%=url([[admin]], [[services]], [[AdGuardHome]], [[status]])%>', null,
+	function(x, data) {
+		var tb = document.getElementById('AdGuardHome_status');
+		if (data && tb) {
+			var statusText = "";
+
+            if (data.running) {
+                statusText = '<span style="padding-left: 5px;">🟢</span> <em style=color:green><%:Core%> <%:Running%></em>';
+            } else {
+                statusText = '<span style="padding-left: 5px;">🔴</span> <em style=color:red><%:Core%> <%:NOT running%></em>';
+            }
+
+            if (data.redirect) {
+                statusText += '<span style="padding-left: 10px;">🟢</span> <em style=color:green><%:Redirected%></em>';
+            } else {
+                statusText += '<span style="padding-left: 10px;">🔴</span> <em style=color:red><%:NOT redirected%></em>';
+            }
+
+            tb.innerHTML = `
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span><b><%:Service status:%></b> ${statusText}</span>
+                <span>📦 ${data.version}</span>
+              </div>`;
+        }
+	}
+);
+</script>
+<style>.mar-10 {margin-left: 50px; margin-right: 10px;}</style>
+<fieldset class="cbi-section">
+	<p id="AdGuardHome_status">
+		<em><%:Collecting data...%></em>
+	</p>
+</fieldset>
