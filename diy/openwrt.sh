@@ -27,7 +27,7 @@ mkdir luci-app-adguardhome
 #mv openwrt-packages/adguardhome ./luci-app-adguardhome/adguardhome
 #rm -rf openwrt-packages
 #四次修改
-git clone https://github.com/sirpdboy/luci-app-adguardhome.git ./luci-app-adguardhome
+git clone https://github.com/OneNAS-space/luci-app-adguardhome.git ./luci-app-adguardhome
 #######################################################################################################
 
 #################################################主题########################################################################################################
