@@ -6,11 +6,10 @@ rm -rf $1
 
 ########################################luci-app-smartdns#############################################
 #原作者 openwrt已有
-#git clone -b master https://github.com/pymumu/luci-app-smartdns 
+git clone -b master https://github.com/pymumu/luci-app-smartdns 
 #git clone https://github.com/pymumu/openwrt-smartdns luci-app-smartdns_packages
 #二次修改
 git clone https://github.com/kenzok8/openwrt-packages
-mv openwrt-packages/luci-app-smartdns ./
 mkdir luci-app-smartdns_packages
 mv openwrt-packages/smartdns ./luci-app-smartdns_packages/
 rm -rf openwrt-packages
@@ -21,12 +20,14 @@ rm -rf openwrt-packages
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome
 #二次修改,弃用
 #git clone https://github.com/kongfl888/luci-app-adguardhome
-#三次修改
-git clone https://github.com/kenzok8/openwrt-packages
-mv openwrt-packages/luci-app-adguardhome ./
-mkdir luci-app-adguardhome_packages
-mv openwrt-packages/adguardhome luci-app-adguardhome_packages/
-rm -rf openwrt-packages
+#三次修改,弃用
+#git clone https://github.com/kenzok8/openwrt-packages
+#mv openwrt-packages/luci-app-adguardhome ./
+#mkdir luci-app-adguardhome_packages
+#mv openwrt-packages/adguardhome luci-app-adguardhome_packages/
+#rm -rf openwrt-packages
+#四次修改
+git clone https://github.com/sirpdboy/luci-app-adguardhome.git
 #######################################################################################################
 
 #################################################主题########################################################################################################
