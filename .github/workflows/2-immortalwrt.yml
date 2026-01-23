@@ -13,7 +13,7 @@ on:
 env:
   REPO: moruiris/openwrt-packages
   BRANCH: immortalwrt
-  PATHS: immortalwrt.sh
+  PATHS: 2-immortalwrt.sh
 
 jobs:
   build:
