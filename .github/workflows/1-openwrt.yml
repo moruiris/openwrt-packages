@@ -1,4 +1,4 @@
-name: Merge-upstream-openwrt
+name: 1-openwrt
 
 on:
   workflow_dispatch:
