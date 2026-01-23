@@ -15,7 +15,7 @@ rm -rf $1
 #三次修改,弃用
 git clone https://github.com/kenzok8/openwrt-packages
 mv openwrt-packages/luci-app-adguardhome ./luci-app-adguardhome
-mv openwrt-packages/adguardhome ./luci-app-adguardhome_packages
+mv openwrt-packages/adguardhome ./luci-app-adguardhome/adguardhome
 rm -rf openwrt-packages
 #######################################################################################################
 
@@ -23,7 +23,7 @@ rm -rf openwrt-packages
 #原作者
 git clone https://github.com/fw876/helloworld
 mv helloworld/luci-app-ssr-plus ./luci-app-ssr-plus
-mv helloworld ./luci-app-ssr-plus_packages
+mv helloworld ./luci-app-ssr-plus/ssr-plus
 #######################################################################################################
 ###########################################################################################################################################################
 
