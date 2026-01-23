@@ -8,8 +8,6 @@ rm -rf $1
 
 ###########################################################################################################################################################
 ########################################luci-app-adguardhome##########################################
-mkdir luci-app-adguardhome
-mkdir luci-app-adguardhome_packages
 #原作者,弃用
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome ./luci-app-adguardhome
 #二次修改,弃用
@@ -22,13 +20,10 @@ rm -rf openwrt-packages
 #######################################################################################################
 
 ########################################luci-app-ssr-plus#############################################
-mkdir luci-app-ssr-plus
-mkdir luci-app-ssr-plus_packages
 #原作者
 git clone https://github.com/fw876/helloworld
 mv helloworld/luci-app-ssr-plus ./luci-app-ssr-plus
-mv helloworld/* ./luci-app-ssr-plus_packages
-rm -rf helloworld
+mv helloworld ./luci-app-ssr-plus_packages
 #######################################################################################################
 ###########################################################################################################################################################
 
