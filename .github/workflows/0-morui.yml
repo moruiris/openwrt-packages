@@ -1,4 +1,4 @@
-name: Merge-upstream-morui
+name: 0-morui
 
 on:
   workflow_dispatch:
