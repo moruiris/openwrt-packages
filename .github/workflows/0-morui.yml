@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - "./diy/0-morui.sh"
+      - "diy/0-morui.sh"
 
 env:
   REPO: moruiris/openwrt-packages
