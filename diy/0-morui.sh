@@ -7,17 +7,6 @@ rm -rf $1
 
 
 ###########################################################################################################################################################
-########################################luci-app-smartdns#############################################
-mkdir luci-app-smartdns
-#原作者 openwrt已有
-git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns/luci-app-smartdns
-#git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns/smartdns
-#二次修改
-git clone https://github.com/kenzok8/openwrt-packages
-mv openwrt-packages/smartdns ./luci-app-smartdns/smartdns
-rm -rf openwrt-packages
-#####################################################################################################
-
 ########################################luci-app-adguardhome##########################################
 mkdir luci-app-adguardhome
 #原作者,弃用
@@ -30,27 +19,6 @@ mv openwrt-packages/luci-app-adguardhome ./luci-app-adguardhome
 mv openwrt-packages/adguardhome ./luci-app-adguardhome/adguardhome
 rm -rf openwrt-packages
 #######################################################################################################
-
-########################################luci-app-passwall##########################################
-git clone https://github.com/xiaorouji/openwrt-passwall-packages ./luci-app-passwall_packages
-#原作者 第1版luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv ./passwall/luci-app-passwall ./ && rm -rf ./passwall
-#原作者 第2版luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv ./passwall/luci-app-passwall2 ./ && rm -rf ./passwall
-#######################################################################################################
-
-########################################luci-app-ssr-plus#############################################
-#原作者
-git clone https://github.com/fw876/helloworld ./luci-app-ssr-plus_packages
-mv luci-app-ssr-plus_packages/luci-app-ssr-plus ./
-#######################################################################################################
-
-#################################################主题##############################################################################################
-########################################luci-theme-argon############################################
-mkdir luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon.git ./luci-theme-argon
-#####################################################################################################
-
 ###########################################################################################################################################################
 
 
