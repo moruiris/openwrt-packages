@@ -8,8 +8,6 @@ rm -rf $1
 
 ###########################################################################################################################################################
 ########################################luci-app-adguardhome##########################################
-mkdir luci-app-adguardhome
-mkdir luci-app-adguardhome_packages
 #原作者,弃用
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome ./luci-app-adguardhome
 #二次修改,弃用
@@ -22,8 +20,6 @@ rm -rf openwrt-packages
 #######################################################################################################
 
 ########################################luci-app-smartdns#############################################
-mkdir luci-app-smartdns
-mkdir luci-app-smartdns_packages
 #原作者 openwrt已有
 #git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns_packages
@@ -35,19 +31,16 @@ rm -rf openwrt-packages
 #####################################################################################################
 
 ########################################luci-app-ssr-plus#############################################
-mkdir luci-app-ssr-plus
-mkdir luci-app-ssr-plus_packages
 #原作者
 git clone https://github.com/fw876/helloworld
 mv helloworld/luci-app-ssr-plus ./luci-app-ssr-plus
-mv helloworld/* ./luci-app-ssr-plus_packages
-rm -rf helloworld
+mv helloworld ./luci-app-ssr-plus_packages
 #######################################################################################################
 
 ########################################luci-app-argon#############################################
 #原作者
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon ./luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config ./luci-app-argon-config
 #####################################################################################################
 ############################################################################################################################################################
 
