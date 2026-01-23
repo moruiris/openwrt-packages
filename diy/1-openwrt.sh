@@ -15,7 +15,7 @@ rm -rf $1
 #三次修改,弃用
 git clone https://github.com/kenzok8/openwrt-packages
 mv openwrt-packages/luci-app-adguardhome ./luci-app-adguardhome
-mv openwrt-packages/adguardhome ./luci-app-adguardhome/adguardhome
+mv openwrt-packages/adguardhome ./packages-adguardhome
 rm -rf openwrt-packages
 #######################################################################################################
 
@@ -26,7 +26,7 @@ rm -rf openwrt-packages
 #二次修改
 git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
 git clone https://github.com/kenzok8/openwrt-packages
-mv openwrt-packages/smartdns ./luci-app-smartdns/smartdns
+mv openwrt-packages/smartdns ./packages-smartdns
 rm -rf openwrt-packages
 #####################################################################################################
 
