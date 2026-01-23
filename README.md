@@ -11,19 +11,19 @@ git clone -b openwrt https://github.com/moruiris/openwrt-packages ./package/moru
 ```bash
 src-git moruiris https://github.com/moruiris/openwrt-packages.git;openwrt
 ```
-## lede自用：
-```bash
-git clone -b lede https://github.com/moruiris/openwrt-packages ./package/moruiris
-```
-```bash
-src-git moruiris https://github.com/moruiris/openwrt-packages.git;lede
-```
 ## immortalwrt自用：
 ```bash
 git clone -b immortalwrt https://github.com/moruiris/openwrt-packages ./package/moruiris
 ```
 ```bash
 src-git moruiris https://github.com/moruiris/openwrt-packages.git;immortalwrt
+```
+## lede自用：
+```bash
+git clone -b lede https://github.com/moruiris/openwrt-packages ./package/moruiris
+```
+```bash
+src-git moruiris https://github.com/moruiris/openwrt-packages.git;lede
 ```
 
 
