@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - "./diy/2-immortalwrt.sh"
+      - "diy/2-immortalwrt.sh"
 
 env:
   REPO: moruiris/openwrt-packages
