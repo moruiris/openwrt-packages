@@ -8,8 +8,6 @@ rm -rf $1
 
 ###########################################################################################################################################################
 ########################################luci-app-adguardhome##########################################
-mkdir luci-app-adguardhome
-mkdir luci-app-adguardhome_packages
 #原作者,弃用
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome ./luci-app-adguardhome
 #二次修改,弃用
@@ -22,8 +20,6 @@ rm -rf openwrt-packages
 #######################################################################################################
 
 ########################################luci-app-smartdns#############################################
-mkdir luci-app-smartdns
-mkdir luci-app-smartdns_packages
 #原作者 openwrt已有
 #git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns_packages
@@ -35,8 +31,7 @@ rm -rf openwrt-packages
 #####################################################################################################
 
 ########################################luci-theme-argon#############################################
-mkdir luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon.git ./luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon ./luci-theme-argon
 ########################################################################################################
 ###########################################################################################################################################################
 
