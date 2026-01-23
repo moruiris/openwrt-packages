@@ -1,4 +1,4 @@
-name: Merge-upstream-immortalwrt
+name: 2-immortalwrt
 
 on:
   workflow_dispatch:
