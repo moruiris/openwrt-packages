@@ -4,19 +4,12 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-########################################luci-app-smartdns#############################################
-mkdir luci-app-smartdns
-#原作者 openwrt已有
-git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns/luci-app-smartdns
-#git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns/smartdns
-#二次修改
-git clone https://github.com/kenzok8/openwrt-packages
-mv openwrt-packages/smartdns ./luci-app-smartdns/smartdns
-rm -rf openwrt-packages
-#####################################################################################################
 
+
+###########################################################################################################################################################
 ########################################luci-app-adguardhome##########################################
 mkdir luci-app-adguardhome
+mkdir luci-app-adguardhome_packages
 #原作者,弃用
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome ./luci-app-adguardhome
 #二次修改,弃用
@@ -24,25 +17,33 @@ mkdir luci-app-adguardhome
 #三次修改,弃用
 git clone https://github.com/kenzok8/openwrt-packages
 mv openwrt-packages/luci-app-adguardhome ./luci-app-adguardhome
-mv openwrt-packages/adguardhome ./luci-app-adguardhome/adguardhome
+mv openwrt-packages/adguardhome ./luci-app-adguardhome_packages
 rm -rf openwrt-packages
 #######################################################################################################
 
-########################################luci-app-passwall##########################################
-git clone https://github.com/xiaorouji/openwrt-passwall-packages ./luci-app-passwall_packages
-#原作者 第1版luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall ./passwall && mv ./passwall/luci-app-passwall ./ && rm -rf ./passwall
-#原作者 第2版luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall2 ./passwall && mv ./passwall/luci-app-passwall2 ./ && rm -rf ./passwall
-#######################################################################################################
+########################################luci-app-smartdns#############################################
+mkdir luci-app-smartdns
+mkdir luci-app-smartdns_packages
+#原作者 openwrt已有
+#git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
+#git clone https://github.com/pymumu/openwrt-smartdns ./luci-app-smartdns_packages
+#二次修改
+git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
+git clone https://github.com/kenzok8/openwrt-packages
+mv openwrt-packages/smartdns ./luci-app-smartdns_packages
+rm -rf openwrt-packages
+#####################################################################################################
 
 ########################################luci-app-ssr-plus#############################################
+mkdir luci-app-ssr-plus
+mkdir luci-app-ssr-plus_packages
 #原作者
-git clone https://github.com/fw876/helloworld ./luci-app-ssr-plus_packages
-mv luci-app-ssr-plus_packages/luci-app-ssr-plus ./
+git clone https://github.com/fw876/helloworld
+mv helloworld/luci-app-ssr-plus ./luci-app-ssr-plus
+mv helloworld/* ./luci-app-ssr-plus_packages
+rm -rf helloworld
 #######################################################################################################
 
-#################################################主题########################################################################################################
 ########################################luci-app-argon#############################################
 #原作者
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
