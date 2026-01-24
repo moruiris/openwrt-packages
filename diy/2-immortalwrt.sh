@@ -21,9 +21,9 @@ rm -rf openwrt-packages
 
 ########################################luci-app-ssr-plus#############################################
 #原作者
-git clone https://github.com/fw876/helloworld
-mv helloworld/luci-app-ssr-plus ./luci-app-ssr-plus
-mv helloworld ./packages-ssr-plus
+#git clone https://github.com/fw876/helloworld
+#mv helloworld/luci-app-ssr-plus ./luci-app-ssr-plus
+#mv helloworld ./packages-ssr-plus
 #######################################################################################################
 ###########################################################################################################################################################
 
