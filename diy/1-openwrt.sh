@@ -27,8 +27,8 @@ mkdir app_smartdns
 #smartdns依赖路径固定，不能添加，如 include ../../lang/rust/rust-package.mk
 #git clone https://github.com/pymumu/openwrt-smartdns ./app_smartdns/smartdns
 #二次修改
+git clone -b master https://github.com/pymumu/luci-app-smartdns ./app_smartdns/luci-app-smartdns
 git clone https://github.com/kenzok8/openwrt-packages
-mv openwrt-packages/luci-app-smartdns ./app_smartdns/luci-app-smartdns
 mv openwrt-packages/smartdns ./app_smartdns/smartdns
 rm -rf openwrt-packages
 #######################################################################################################
