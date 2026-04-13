@@ -48,7 +48,7 @@ mv helloworld ./packages-ssr-plus
 git clone https://github.com/jerrykuku/luci-theme-argon ./luci-theme-argon
 ###########luci-app-argon-lede
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon ./luci-theme-argon-lede
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config ./luci-app-argon-lede-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon-config ./luci-theme-argon-lede-config
 #######################################################################################################
 
 
