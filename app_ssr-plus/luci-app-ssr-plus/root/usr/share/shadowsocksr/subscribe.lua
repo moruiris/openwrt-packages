@@ -34,6 +34,7 @@ local target_subscribe_sid = tostring(arg and arg[1] or ""):gsub("^%s*(.-)%s*$",
 
 local has_ss_rust = luci.sys.exec('type -t -p sslocal 2>/dev/null || type -t -p ssserver 2>/dev/null') ~= ""
 local has_xray = luci.sys.exec('type -t -p xray 2>/dev/null') ~= ""
+local has_mihomo = luci.sys.exec('type -t -p mihomo -p /usr/libexec/mihomo 2>/dev/null') ~= ""
 
 local tuic_type = luci.sys.exec('type -t -p mihomo -p /usr/libexec/mihomo 2>/dev/null') ~= "" and "tuic"
 local log = function(...)
@@ -41,6 +42,9 @@ local log = function(...)
 end
 
 local function preferred_ss_backend()
+	if has_mihomo then
+		return "ss"
+	end
 	if has_ss_rust then
 		return "ss-rust"
 	end
@@ -1612,6 +1616,49 @@ local function loadOldNodes(groupHash)
 	end)
 end
 
+local function get_section_ss_backend(section)
+	if not section then
+		return nil
+	end
+	if section.type == "ss" or section.type == "ss-libev" then
+		return "ss"
+	end
+	if section.type == "ss-rust" then
+		return "ss-rust"
+	end
+	if section.type == "v2ray" and section.v2ray_protocol == "shadowsocks" then
+		return "v2ray"
+	end
+	return nil
+end
+
+local function group_needs_ss_backend_refresh(groupHash)
+	local preferred = preferred_ss_backend()
+	local has_ss_node = false
+	local needs_refresh = false
+
+	if not preferred then
+		return false
+	end
+
+	ucic:foreach(name, uciType, function(s)
+		if s.grouphashkey ~= groupHash then
+			return
+		end
+
+		local current = get_section_ss_backend(s)
+		if current then
+			has_ss_node = true
+			if current ~= preferred then
+				needs_refresh = true
+				return false
+			end
+		end
+	end)
+
+	return has_ss_node and needs_refresh
+end
+
 local function preserve_unselected_groups(selected_hashes)
 	local preserved = {}
 
@@ -1655,10 +1702,11 @@ local execute = function()
 		log("old_md5: " .. tostring(old_md5))
 		log("new_md5: " .. tostring(new_md5))
 
+		local backend_refresh = group_needs_ss_backend_refresh(groupHash)
 		if #raw == 0 then
 			log(url .. ': 获取内容为空')
 			loadOldNodes(groupHash)
-		elseif old_md5 and new_md5 == old_md5 then
+		elseif old_md5 and new_md5 == old_md5 and not backend_refresh then
 				log("订阅未变化, 跳过无需更新的订阅: " .. url)
 				-- 防止 diff 阶段误删未更新订阅节点
 				loadOldNodes(groupHash)
@@ -1669,6 +1717,9 @@ local execute = function()
 				--	end
 				--end)
 		else
+				if backend_refresh and old_md5 and new_md5 == old_md5 then
+					log("检测到 SS 后端偏好变化，强制重建订阅节点: " .. url)
+				end
 				updated = true
 				-- 保存更新后的 MD5 值到以 groupHash 为标识的临时文件中，用于下次订阅更新时进行对比
 				write_new_md5(groupHash, new_md5)
