@@ -3,8 +3,7 @@ name: 1-openwrt
 on:
   workflow_dispatch:
   schedule:
-    - cron: "50 1 * * *"
-      timezone: "Asia/Shanghai"
+    - cron: "30 16 * * *"
   push:
     branches:
       - main
