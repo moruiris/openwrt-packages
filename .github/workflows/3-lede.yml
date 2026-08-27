@@ -3,7 +3,7 @@ name: 3-lede
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "25 2 * * *"
       timezone: "Asia/Shanghai"
   push:
     branches:
