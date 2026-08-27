@@ -3,7 +3,8 @@ name: 2-immortalwrt
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 23 * * *"
+    - cron: "30 0 * * *"
+      timezone: 'Asia/Shanghai'
   push:
     branches:
       - main
