@@ -6,7 +6,7 @@ rm -rf $1
 ###########################################################################################################################################################
 
 #######################################################################################################
-###########luci-app-adguardhome
+###########luci-app-adguardhome官方源码已自带
 #mkdir app_adguardhome
 #原作者,弃用
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome ./app_adguardhome/luci-app-adguardhome
