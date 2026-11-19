@@ -20,7 +20,7 @@ rm -rf openwrt-packages
 #######################################################################################################
 
 #######################################################################################################
-###########luci-app-smartdns 官方源码有,但不是最新版本
+###########luci-app-smartdns
 mkdir app_smartdns
 #原作者
 git clone -b master https://github.com/pymumu/luci-app-smartdns ./app_smartdns/luci-app-smartdns
